@@ -1,0 +1,99 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+}
+
+.left{
+    background-color: rgb(245, 245, 157);
+    padding: 30px 20px;
+}
+
+.divisions{
+    padding: 30px 0px;
+    border-bottom: 5px solid black;
+}
+
+.title.divisions{
+    padding-top: 0%;
+}
+
+.quantity.divisions{
+    display: flex;
+    justify-content: space-between;
+}
+
+.quantity.divisions input{
+    border: none;
+    background-color: transparent;
+    border: 1px solid black;
+    color: black;
+    border-radius: 3px;
+    padding: 10px 5px;
+    width: 20%;
+}
+
+.codes.divisions{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-content: space-between;
+    align-items: space-between;
+}
+
+.left .codes.divisions.hide, .status.hide{
+    display: none;
+}
+
+.color-code:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: transform 200ms linear;
+    font-weight: bolder;
+}
+
+.left .btn{
+    border: none;
+    background-color: transparent;
+    border: 1px solid black;
+    color: black;
+    border-radius: 3px;
+    padding: 10px 5px;
+    font-size: 1.5rem;
+}
+
+.left .btn:hover{
+    background-color: black;
+    color: rgb(245, 245, 157);
+    border: 1px solid rgb(245, 245, 157);
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: transform 200ms linear;
+}
+
+.left .status{
+    background-color: #101010;
+    color: rgb(245, 245, 157);
+    padding: 10px 5px;
+    margin: 10px 0px;
+    text-align: center;
+}
+
+.right{
+    background-color: #101010;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(100px, 1fr));
+    justify-content: space-evenly;
+}
+
+.right .color-box:hover{
+    cursor: pointer;
+}
