@@ -14,13 +14,13 @@ body{
 .left{
     background-color: rgb(245, 245, 157);
     padding: 30px 20px;
+    position: relative;
 }
 
 .left .container{
     position: sticky;
     top: 30px;
     left: 0px;
-
 }
 
 .divisions{
@@ -96,12 +96,14 @@ body{
 
 .right{
     background-color: #101010;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    /* grid-template-rows: repeat(1fr, 12); */
 }
 
 .right .color-box{
-    display: inline-block;
-    height: 100px;
-    width: 100px;
+    min-height: 50px;
+    min-width: 50px;
 }
 
 .right .color-box:hover{
