@@ -48,7 +48,8 @@ body{
     width: 20%;
 }
 
-.codes.divisions{
+.codes.divisions .wrapper{
+    margin: 5px 0px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -96,16 +97,62 @@ body{
 
 .right{
     background-color: #101010;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    /* grid-template-rows: repeat(1fr, 12); */
+    /* display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)) */
 }
 
 .right .color-box{
-    min-height: 50px;
-    min-width: 50px;
+    display: inline-block;
+    min-height: 80px;
+    min-width: 80px;
 }
 
 .right .color-box:hover{
     cursor: pointer;
+}
+
+@media (max-width: 900px){
+    .title.divisions{
+        font-size: 14px;
+    }
+
+    .left .btn{
+        font-size: 1rem;
+    }
+
+    .quantity.divisions{
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+    }
+    .quantity.divisions input{
+        margin: 5px 0px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 800px){
+    body{
+        display: grid;
+        grid-template-columns: 3fr 4fr;
+    }
+}
+
+@media (max-width: 600px){
+    body{
+        display: flex;
+        flex-direction: column;
+    }
+    .left, .left .container {
+        position: static;
+    }
+}
+
+@media (max-width: 260px){
+    .title.divisions{
+        font-size: 10px;
+    }
+    .left .btn{
+        font-size: 1rem;
+    }
 }
