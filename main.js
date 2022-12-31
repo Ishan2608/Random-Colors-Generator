@@ -18,6 +18,7 @@ function start_script(){
     const hex_code = document.querySelector('.codes .hex-code');
     const rgb_code = document.querySelector('.codes .rgb-code');
     const status_text = document.querySelector('.status');
+    const instructions = document.querySelector('.instructions');
 
     // A list of all the color boxes. Initially there are not any.
     let color_boxes = null;
@@ -53,6 +54,9 @@ function start_script(){
 
         // now that the color boxes have been created, now select them.
         color_boxes = document.querySelectorAll('.color-box');
+
+        // now tell user to click on box to view its color
+        instructions.classList.remove('hide')
 
         // for each box, listen to click event and show its color codes in hex and rgb
         color_boxes.forEach(box =>{
@@ -110,7 +114,7 @@ function start_script(){
     // once the user click the code, copy it to clipboard
     function copy_to_clipboard(event){
         navigator.clipboard.writeText(event.target.textContent);
-        status_text.textContent = "Copied to Clipboard";
+        status_text.textContent = "Copied to Clipboard !!!";
         status_text.classList.remove('hide');
         setTimeout(()=>{
             status_text.classList.add('hide');
