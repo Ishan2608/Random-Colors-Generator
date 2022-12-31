@@ -31,15 +31,27 @@ function start_script(){
     hex_code.addEventListener('click', copy_to_clipboard);
     rgb_code.addEventListener('click', copy_to_clipboard);
     generate_btn.addEventListener('click', ()=>{
+        // if the user did not specify the quantity
+        if (color_qty.value === ""){
+            // tell him to specify quantity
+            instructions.textContent = "Please specify the quantity!";
+            // make the color red of instruction to give effect of an error
+            instructions.style.color = "red";
+            // hide the codes section if displayed due to previous run
+            codes_div.classList.add('hide');
+            // show the instructions
+            instructions.classList.remove('hide');
+            return;
+        }
 
         // before adding new colors, first remove the existing ones.
-        destroy(right_panel)
+        destroy(right_panel);
 
         // hide the section of codes to be copied initially, if not hidden previously
         codes_div.classList.add('hide');
 
         // get the quantity of colors to generate
-        let qty = color_qty.value;
+        let qty = parseInt(color_qty.value);
 
         // create a div element, add the class color-box to it, give it background color which is randomly generated, and append this as child to the right panel. Do this as many times as the specified quantity. Thus run a loop.
         for (let quantity = 0; quantity < qty; quantity++) {
@@ -56,7 +68,9 @@ function start_script(){
         color_boxes = document.querySelectorAll('.color-box');
 
         // now tell user to click on box to view its color
-        instructions.classList.remove('hide')
+        instructions.textContent = "Click on color box to see it's color code";
+        instructions.style.color = "rgb(245, 245, 157)";
+        instructions.classList.remove('hide');
 
         // for each box, listen to click event and show its color codes in hex and rgb
         color_boxes.forEach(box =>{
