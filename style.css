@@ -99,16 +99,22 @@ body{
     background-color: #101010;
     /* display: grid;
     grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)) */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .right .color-box{
-    display: inline-block;
     min-height: 80px;
     min-width: 80px;
 }
 
 .right .color-box:hover{
     cursor: pointer;
+    transform: scale(1.2);
+    box-shadow: 3px 3px 10px black, -3px -3px 10px black;
 }
 
 @media (max-width: 900px){
