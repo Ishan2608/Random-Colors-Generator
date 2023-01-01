@@ -180,12 +180,16 @@ body{
     }
 }
 
-@media (max-width: 260px){
+@media (max-width: 276px){
     .title.divisions{
         font-size: 10px;
     }
     .left .btn{
         font-size: 1rem;
+    }
+    .start-app button.btn{
+        width: 100%;
+        font-size: 12px;
     }
 }
 
