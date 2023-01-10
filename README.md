@@ -5,3 +5,4 @@
   <li>He can click on each color box created to see its color codes in hex and rgb.</li>
   <li>He can also click on the codes and they will be automatically copied to his clipboard.</li>
 </ul>
+<a class="btn" href="https://ishan2608.github.io/Random-Colors-Generator/" target="__blank">Open Site</a>
